@@ -1,11 +1,11 @@
 [Unit]
-Description=sflow2kafka sflow collector daemon (x2kafka)
+Description=redborder-sflow2kafka sflow collector daemon (x2kafka)
 After=network.target kafka.service
 
 [Service]
 User=root
-RuntimeDirectory=sflow2kafka
-ExecStart=/usr/bin/x2kafka /etc/sflow2kafka/config.json
+RuntimeDirectory=redborder-sflow2kafka
+ExecStart=/usr/bin/x2kafka /etc/redborder-sflow2kafka/config.json
 ExecReload=/bin/kill -HUP $MAINPID
 Restart=always
 RestartSec=5s
